@@ -23,7 +23,7 @@ let defenderDied = 0;
 function getRandomNumber() {
   return Math.floor(Math.random() * 6 + 1);
 }
-
+//Adding the class disabled for the attacker dices
 attackerDices.forEach((dice) => {
   dice.addEventListener('click', (e) => {
     if (
@@ -38,7 +38,7 @@ attackerDices.forEach((dice) => {
     }
   });
 });
-
+//Adding the class disabled for the defender dices
 defenderDices.forEach((dice) => {
   dice.addEventListener('click', (e) => {
     if (
@@ -53,7 +53,7 @@ defenderDices.forEach((dice) => {
     }
   });
 });
-
+//Updating the array for the players with the active dices
 rollDice.addEventListener('click', () => {
   rollSoud.pause();
   rollSoud.currentTime = 0;
@@ -69,7 +69,7 @@ rollDice.addEventListener('click', () => {
   defenderRoll.sort().reverse();
   updateLayout();
 });
-
+//Updating the assets of the active dices
 function updateLayout() {
   const attackerAvailableDices = attackerDices.filter(
     (dice) => !dice.classList.contains('disabled')
@@ -91,7 +91,7 @@ function updateLayout() {
 
   calculateDied();
 }
-
+//Calculated how much troops are dead
 function calculateDied() {
   for (i = 0; i < 10; i++) {
     if (i >= attackerRoll.length || i >= defenderRoll.length) {
@@ -105,6 +105,7 @@ function calculateDied() {
       attackerDied++;
     }
   }
+  //Resetting the values of the deads and the rolled numbers for both the players
   attackerDied = 0;
   defenderDied = 0;
   attackerRoll = [];
