@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="/assets/icon.png" />
+    <title>Risk Dice Roller</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img src="/assets/risk_logo.png" alt="risk_logo" id="logo" />
+        <h1>Dice Roller</h1>
+      </header>
+      <div class="dices-container">
+        <div class="dice-set">
+          <span class="died died-attacker">Died</span>
+          <div class="died-count-container">
+            <span class="died-count" id="died-count-attacker">2</span>
+          </div>
+          <div class="dice" id="d1-attacker"></div>
+          <div class="dice" id="d2-attacker"></div>
+          <div class="dice" id="d3-attacker"></div>
+        </div>
+        <div class="dice-set">
+          <span class="died died-defender">Died</span>
+          <div class="died-count-container">
+            <span class="died-count" id="died-count-defender">0</span>
+          </div>
+          <div class="dice" id="d1-defender"></div>
+          <div class="dice" id="d2-defender"></div>
+        </div>
+      </div>
+      <button id="roll-dice">Roll Dice</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@font-face {
+  font-family: 'Marvin';
+  src: url('/fonts/Marvin.ttf');
+}
+
+:root {
+  --attacker-color: #d01a1c;
+  --defender-color: #0f5f99;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('/assets/bg.png');
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  margin-top: 50px;
+  max-width: 100%;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header #logo {
+  width: 190px;
+}
+
+h1 {
+  font-family: 'Marvin', 'sans-serif';
+  font-size: 24px;
+  color: var(--attacker-color);
+  margin-top: 10px;
+}
+.dices-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 70px;
+}
+.dice-set {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.died {
+  font-family: 'Marvin', 'sans-serif';
+  font-size: 20px;
+}
+
+.died-attacker {
+  color: var(--attacker-color);
+}
+
+.died-defender {
+  color: var(--defender-color);
+}
+
+.died-count-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.died-count {
+  font-family: 'Poppins', 'sans-serif';
+  font-weight: 700;
+  font-size: 24px;
+}
+
+#died-count-attacker {
+  color: var(--attacker-color);
+}
+
+#died-count-defender {
+  color: var(--defender-color);
+}
+
+.dice {
+  width: 80px;
+  height: 80px;
+  background-image: url(/assets/a_dices/6.png);
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+#roll-dice {
+  font-family: 'Marvin', 'sans-serif';
+  font-size: 24px;
+  color: #fff;
+  background-color: #274d69;
+  width: 100%;
+  height: 65px;
+  border: 0;
+  border-radius: 5px;
+  margin-top: 45px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in;
+}
+
+#roll-dice:focus {
+  outline: none;
+}
+
+#roll-dice:active {
+  transform: scale(0.98);
+}
+
+#roll-dice:hover {
+  background-color: #1e3f57;
+}
