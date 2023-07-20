@@ -8,6 +8,7 @@ const defenderDices = [
   document.getElementById('d2-defender'),
 ];
 
+const rollSoud = document.getElementById('roll-sound');
 const diedAttacker = document.getElementById('died-count-attacker');
 const diedDefender = document.getElementById('died-count-defender');
 const rollDice = document.getElementById('roll-dice');
@@ -54,6 +55,9 @@ defenderDices.forEach((dice) => {
 });
 
 rollDice.addEventListener('click', () => {
+  rollSoud.pause();
+  rollSoud.currentTime = 0;
+  rollSoud.play();
   for (i = 0; i < attackerAvailableDices; i++) {
     attackerRoll.push(getRandomNumber());
   }
@@ -93,6 +97,7 @@ function calculateDied() {
     if (i >= attackerRoll.length || i >= defenderRoll.length) {
       diedAttacker.innerText = attackerDied;
       diedDefender.innerText = defenderDied;
+      console.log(i);
       break;
     }
     if (attackerRoll[i] > defenderRoll[i]) {
