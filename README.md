@@ -20,6 +20,7 @@ Users should be able to:
 
 - Unable/disable dices.
 - Roll the dices.
+- See how much troops are dead.
 
 ### Screenshots
 
@@ -35,8 +36,6 @@ Users should be able to:
 
 - HTML5
 - CSS3
-- CSS custom properties
-- CSS grid
 - JavaScript
 
 ## Author
