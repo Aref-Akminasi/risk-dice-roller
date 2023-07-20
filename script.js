@@ -97,7 +97,6 @@ function calculateDied() {
     if (i >= attackerRoll.length || i >= defenderRoll.length) {
       diedAttacker.innerText = attackerDied;
       diedDefender.innerText = defenderDied;
-      console.log(i);
       break;
     }
     if (attackerRoll[i] > defenderRoll[i]) {
