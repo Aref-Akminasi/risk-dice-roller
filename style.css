@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 @font-face {
   font-family: 'Marvin';
-  src: url('/fonts/Marvin.ttf');
+  src: url('fonts/Marvin.ttf');
 }
 
 :root {
@@ -16,7 +16,7 @@
 }
 
 body {
-  background-image: url('/assets/bg.png');
+  background-image: url('assets/bg.png');
   display: flex;
   justify-content: center;
 }
@@ -94,7 +94,7 @@ h1 {
 .dice {
   width: 80px;
   height: 80px;
-  background-image: url(/assets/a_dices/6.png);
+  background-image: url('assets/a_dices/6.png');
   margin: 15px 0;
   overflow: hidden;
 }
