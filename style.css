@@ -15,6 +15,14 @@
   padding: 0;
 }
 
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   background-image: url('assets/bg.png');
   display: flex;
@@ -94,7 +102,7 @@ h1 {
 .dice {
   width: 80px;
   height: 80px;
-  background-image: url('assets/a_dices/6.png');
+  background-image: url('assets/d_dices/6.jpg');
   margin: 15px 0;
   overflow: hidden;
 }
