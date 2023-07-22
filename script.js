@@ -58,12 +58,12 @@ rollDice.addEventListener('click', () => {
   rollSoud.pause();
   rollSoud.currentTime = 0;
   rollSoud.play();
-  for (i = 0; i < attackerAvailableDices; i++) {
+  for (let i = 0; i < attackerAvailableDices; i++) {
     attackerRoll.push(getRandomNumber());
   }
   attackerRoll.sort().reverse();
 
-  for (i = 0; i < defenderAvailableDices; i++) {
+  for (let i = 0; i < defenderAvailableDices; i++) {
     defenderRoll.push(getRandomNumber());
   }
   defenderRoll.sort().reverse();
@@ -74,7 +74,7 @@ function updateLayout() {
   const attackerAvailableDices = attackerDices.filter(
     (dice) => !dice.classList.contains('disabled')
   );
-  for (i = 0; i < attackerAvailableDices.length; i++) {
+  for (let i = 0; i < attackerAvailableDices.length; i++) {
     attackerAvailableDices[
       i
     ].style.backgroundImage = `url('assets/a_dices/${attackerRoll[i]}.jpg`;
@@ -83,7 +83,7 @@ function updateLayout() {
   const defenderAvailableDices = defenderDices.filter(
     (dice) => !dice.classList.contains('disabled')
   );
-  for (i = 0; i < defenderAvailableDices.length; i++) {
+  for (let i = 0; i < defenderAvailableDices.length; i++) {
     defenderAvailableDices[
       i
     ].style.backgroundImage = `url('assets/d_dices/${defenderRoll[i]}.jpg`;
@@ -93,7 +93,7 @@ function updateLayout() {
 }
 //Calculated how much troops are dead
 function calculateDied() {
-  for (i = 0; i < 10; i++) {
+  for (let i = 0; i < 10; i++) {
     if (i >= attackerRoll.length || i >= defenderRoll.length) {
       diedAttacker.innerText = attackerDied;
       diedDefender.innerText = defenderDied;
